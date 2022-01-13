@@ -29,7 +29,7 @@ router.post('/addUser', (req, res, next) => {
   let username = req.body.username;
   if (userExists(username)){
     displayError = true;
-    errorMessage = `'${username} Already Exists'`
+    errorMessage = `'${username}' Already Exists`
     res.redirect('/ta02');
   } else {
     displayError = false;
