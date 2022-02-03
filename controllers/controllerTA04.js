@@ -29,3 +29,9 @@ exports.decCounter = (req, res, next) => {
   req.session.counter -= 1;
   res.redirect("/ta04");
 }
+
+exports.resetSession = (req, res, next) => {
+  req.session.destroy(() => {
+    res.redirect("/ta04");
+  });
+}
