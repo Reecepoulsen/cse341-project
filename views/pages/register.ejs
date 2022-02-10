@@ -16,11 +16,12 @@
     </div>
   </div>
   <div class="container">
-    <div class="link-container">
-      <a href="/register">Create an Account</a>
-      <a href="/login">Login</a>
-    </div>
-    <p>Please login</p>
+    <form action="/register" method="POST">
+      <input required type="email" name="email" placeholder="Email">
+      <input required type="password" name="password" placeholder="Password">
+      <input required type="password" name="confirmPassword" placeholder="Confirm Password">
+      <button type="submiy">Create Account</button>
+    </form>
   </div>
 </body>
 
