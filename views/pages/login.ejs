@@ -16,7 +16,10 @@
     </div>
   </div>
   <div class="container">
-    <form action="/login" method="POST">
+    <% if(errorMessage) { %>
+      <div class="user-message user-message--error"><%= errorMessage %></div>
+    <% } %>
+    <form action="/ta06/login" method="POST">
       <input required type="email" name="email" placeholder="Email">
       <input required type="password" name="password" placeholder="Password">
       <button type="submit">Login</button>
